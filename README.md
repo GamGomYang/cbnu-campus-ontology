@@ -1,6 +1,6 @@
 # CBNU Campus Ontology
 
-## Abstract
+충북대 학사·도서관·비교과·장학 데이터를 Neo4j 온톨로지 그래프로 통합해 보는 실험 프로젝트임.
 
 - **시스템 분산으로 인한 어려움**  
   도서관·학사행정(개신누리)·LMS·비교과(CIEAT)·학과 공지 시스템이 각각 따로 존재함. 동일 학사 흐름(도서–수업–학사 일정–장학)을 한 화면에서 확인하기 어렵고, 서비스 간 교차 참조가 불가능함.
@@ -120,23 +120,23 @@ pytest
 아래 이미지는 Neo4j Browser에서 추출한 주요 시각화 예시입니다.
 
 1. **교과·비교과 프로그램 – 학사일정**  
-   `docs/images/program_timeline.png`  
-   ![Program vs Academic Event](docs/images/program_timeline.png)  
+   `docs/images/program.png`  
+   ![Program vs Academic Event](docs/images/program.png)  
    학기별 이벤트(수강신청, 중간/기말고사 등)를 중심으로, 주변에 Career/Leadership/Research 등 프로그램 노드를 연결했습니다. 일정별 프로그램 밀도를 한눈에 확인할 수 있습니다.
 
 2. **학생 – 과목 – 도서 – 장학 전체 구조**  
-   `docs/images/global_student_course.png`  
-   ![Global Student Course Graph](docs/images/global_student_course.png)  
+   `docs/images/all.png`  
+   ![Global Student Course Graph](docs/images/all.png)  
    학생 수강, 추천 도서, 비교과, 장학금이 어떻게 묶이는지 전체 망을 보여줍니다. 실제 운영 데이터로 확장 시 구조적 병목이나 고립된 하위 그래프를 찾는 데 유용합니다.
 
 3. **전공 – 장학 – 학생**  
-   `docs/images/major_scholarship.png`  
-   ![Major Scholarship Graph](docs/images/major_scholarship.png)  
+   `docs/images/student.png`  
+   ![Major Scholarship Graph](docs/images/student.png)  
    `CSE AI Systems` 전공 노드를 중심으로 학생과 장학 제도가 동시에 연결된 모습입니다. 특정 전공 학생에게 열려 있는 장학 옵션을 즉시 탐색할 수 있습니다.
 
 4. **과목 – 학생 수강 관계**  
-   `docs/images/course_enrollment.png`  
-   ![Course Enrollment Graph](docs/images/course_enrollment.png)  
+   `docs/images/datastructure.png`  
+   ![Course Enrollment Graph](docs/images/datastructure.png)  
    `Data Structures` 과목을 기준으로 실제 이름을 가진 학생들이 어떻게 묶이는지 보여줍니다. 공동 수강생 네트워크, 인기 과목 분석 등에 활용 가능합니다.
 
 5. **단과대 – 전공/학과 조직도**  
