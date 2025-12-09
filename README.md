@@ -1,6 +1,6 @@
 # CBNU Campus Ontology
 
-충북대 학사·도서관·비교과·장학 데이터를 Neo4j 온톨로지 그래프로 통합해 보는 실험 프로젝트임.
+**충북대 학사·도서관·비교과·장학 데이터를 Neo4j 온톨로지 그래프로 통합해 보는 실험 프로젝트임.**
 
 - **시스템 분산으로 인한 어려움**  
   도서관·학사행정(개신누리)·LMS·비교과(CIEAT)·학과 공지 시스템이 각각 따로 존재함. 동일 학사 흐름(도서–수업–학사 일정–장학)을 한 화면에서 확인하기 어렵고, 서비스 간 교차 참조가 불가능함.
@@ -77,15 +77,6 @@ pip install -r requirements.txt
 - Python 3.11+
 - Neo4j Aura Free 또는 로컬 Neo4j 5.x
 - Poetry/venv 등 가상환경(선택)
-
-### 3.2 환경 변수
-
-```powershell
-$env:NEO4J_URI = "neo4j+s://<your-instance>.databases.neo4j.io"
-$env:NEO4J_USER = "neo4j"
-$env:NEO4J_PASSWORD = "<password>"
-$env:NEO4J_DATABASE = "neo4j"
-```
 
 ### 3.3 데이터 적재
 
